@@ -1,13 +1,23 @@
-import { Component, Input } from '@angular/core';
+import { AfterViewInit, Component, Input, OnDestroy } from "@angular/core";
 
 @Component({
-  selector: 'song-detail',
+  selector: "song-detail",
   standalone: true,
   imports: [],
-  templateUrl: './song-detail.component.html',
-  styleUrl: './song-detail.component.css'
+  templateUrl: "./song-detail.component.html",
+  styleUrl: "./song-detail.component.css",
 })
-export class SongDetailComponent {
+export class SongDetailComponent implements AfterViewInit, OnDestroy {
+  @Input() id = "";
+  song = new Audio();
+  ngAfterViewInit(): void {
+    this.song.src = `../assets/songs/${this.id}.mp3`;
+    this.song.load();
+    this.song.volume = 1
+    this.song.play();
+  }
 
-  @Input() id = '';
+  ngOnDestroy(): void {
+    this.song.pause();
+  }
 }
