@@ -7,6 +7,7 @@
     "build": "ng build",
     "buildProd": "ng build --configuration production",
     "buildProdSite": "ng build --configuration production --base-href \"https://jarvis0328.github.io/WeddingSongsTables/\"",
+    "buildDocs": "ng build --output-path docs --base-href /WeddingSongsTables/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:weddingsongstables": "node dist/weddingsongstables/server/server.mjs",
