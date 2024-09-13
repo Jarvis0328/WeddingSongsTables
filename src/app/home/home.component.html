@@ -1,4 +1,6 @@
 <p class="text-center fs-1">HOME</p>
-<a [routerLink]="['song/{{1}}']" type="button" class="btn btn-primary">
-  Primary
+@for (songId of songs; track $index) {
+<a [routerLink]="['../song/' + songId]" type="button" class="btn btn-primary">
+  {{songId}}
 </a>
+}
