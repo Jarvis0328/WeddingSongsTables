@@ -1,7 +1,7 @@
-<div class="d-flex bg-pink min-vh-100 font-wedding">
-  <p class="text-center fs-1 pt-3 flex-column">HOME</p>
+<div class="d-flex bg-pink min-vh-100 font-wedding flex-column">
+  <p class="text-center fs-1 pt-4">HOME</p>
   @for (songId of songs; track $index) {
-  <a [routerLink]="['../song/' + songId]" type="button" class="btn btn-primary">
+  <a [routerLink]="['../song/' + songId]" type="button" class="d-flex btn btn-primary song-button justify-content-center align-items-center my-4 fw-bold">
     {{ songId }}
   </a>
   }
