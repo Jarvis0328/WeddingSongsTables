@@ -14,7 +14,7 @@ export class SongDetailComponent implements AfterViewInit, OnDestroy {
     this.song.src = `../assets/songs/${this.id}.mp3`;
     this.song.load();
     this.song.volume = 1
-    this.song.play();
+    // this.song.play();
   }
 
   ngOnDestroy(): void {
