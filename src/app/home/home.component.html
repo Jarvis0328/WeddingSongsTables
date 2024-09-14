@@ -1,6 +1,8 @@
-<p class="text-center fs-1">HOME</p>
-@for (songId of songs; track $index) {
-<a [routerLink]="['../song/' + songId]" type="button" class="btn btn-primary">
-  {{songId}}
-</a>
-}
+<div class="d-flex bg-pink min-vh-100 font-wedding">
+  <p class="text-center fs-1 pt-3 flex-column">HOME</p>
+  @for (songId of songs; track $index) {
+  <a [routerLink]="['../song/' + songId]" type="button" class="btn btn-primary">
+    {{ songId }}
+  </a>
+  }
+</div>

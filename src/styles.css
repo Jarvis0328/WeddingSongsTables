@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+.bg-pink{
+    background-color: #d63384;
+}
+
+.font-wedding{
+    font-family: 'Lucida Handwriting', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
