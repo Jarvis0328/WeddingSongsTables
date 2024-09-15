@@ -11,7 +11,7 @@ export class SongDetailComponent implements AfterViewInit, OnDestroy {
   @Input() id = "";
   song = new Audio();
   ngAfterViewInit(): void {
-    this.song.src = `../assets/songs/${this.id}.mp3`;
+    this.song.src = `./assets/songs/${this.id}.mp3`;
     this.song.load();
     this.song.volume = 1
     // this.song.play();
