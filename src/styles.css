@@ -1,8 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --pink: #FFB6C1;
+}
+
 .bg-pink{
-    background-color: #d63384;
+    background-color: var(--pink);
 }
 
 .font-wedding{
-    font-family: 'Lucida Handwriting', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'LucidaHandwritingStdLight', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+@font-face {
+    font-family: 'LucidaHandwritingStdLight';
+    src: url('.\\assets\\Fonts\\lucida-handwriting\\LucidaHandwritingStdLight.TTF') format('truetype');
 }
