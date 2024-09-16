@@ -1,9 +1,17 @@
-.spinner{
-    width: 10rem;
-    height: 10rem;
-    color: var(--pink);
+.spinner {
+  width: 10rem;
+  height: 10rem;
 }
 
-.spinner-father{
-    padding-top: 6rem;
+.spinner-father {
+  padding-top: 6rem;
+}
+
+.color-pink {
+  color: var(--pink);
+}
+
+.home-button {
+  margin-left: auto;
+  margin-right: auto;
 }
