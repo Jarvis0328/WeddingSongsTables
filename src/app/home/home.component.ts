@@ -24,6 +24,5 @@ export class HomeComponent {
     "12",
     "13",
     "14",
-    "15",
   ];
 }
