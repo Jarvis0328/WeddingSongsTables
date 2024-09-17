@@ -1,9 +1,10 @@
 import { AfterViewInit, Component, Input, OnDestroy } from "@angular/core";
+import { Router, RouterModule } from "@angular/router";
 
 @Component({
   selector: "song-detail",
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: "./song-detail.component.html",
   styleUrl: "./song-detail.component.css",
 })
