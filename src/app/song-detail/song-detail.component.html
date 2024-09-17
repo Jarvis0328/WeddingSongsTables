@@ -5,9 +5,19 @@
   <div class="pt-5 fs-3 text-center">
     Ascolta la canzone<br />e<br />trova il tuo tavolo
   </div>
-  <div class="spinner-father">
-    <div class="spinner-grow spinner color-pink"></div>
-  </div>
+  @if (!isSongPlaying) {
+    <div class="play-father">      
+      <button type="button" class="btn play-button fs-1 h-100 bg-pink" aria-label="ASCOLTA" (click)="playSong()">
+        <img src="/assets/icons/play-fill.svg" width="48" height="48">
+        ASCOLTA
+      </button>
+    </div>
+    }
+  @if (isSongPlaying) {
+    <div class="spinner-father">
+      <div class="spinner-grow spinner color-pink"></div>
+    </div>
+  }
     <button 
     [routerLink]="['/home/']" 
     type="button" 
