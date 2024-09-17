@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, Input, OnDestroy } from "@angular/core";
 import { Router, RouterModule } from "@angular/router";
+import { error } from "console";
 
 @Component({
   selector: "song-detail",
@@ -11,14 +12,32 @@ import { Router, RouterModule } from "@angular/router";
 export class SongDetailComponent implements AfterViewInit, OnDestroy {
   @Input() id = "";
   song = new Audio();
+  isSongPlaying: boolean = true;
   ngAfterViewInit(): void {
-    this.song.src = `./assets/songs/${this.id}.mp3`;
-    this.song.load();
-    this.song.volume = 1
-    this.song.play();
+    this.playSong();
   }
 
   ngOnDestroy(): void {
     this.song.pause();
   }
+
+  public playSong() {
+    this.song.src = `./assets/songs/${this.id}.mp3`;
+    this.song.load();
+    this.song.volume = 1
+    let playPromise = this.song.play();
+
+    if (playPromise !== undefined) {
+      playPromise
+      .then(() => {
+        this.isSongPlaying = true
+      })
+      .catch((error) => {
+        if (error.name === "NotAllowedError") {
+          this.isSongPlaying = false
+        }
+      })
+    }
+  }
+
 }
